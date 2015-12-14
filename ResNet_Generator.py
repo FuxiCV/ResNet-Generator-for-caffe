@@ -3,6 +3,8 @@
 Generate the residule learning network.
 Author: Yemin Shi
 Email: shiyemin@pku.edu.cn
+
+MSRA Paper: http://arxiv.org/pdf/1512.03385v1.pdf
 """
 from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 
