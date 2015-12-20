@@ -325,7 +325,7 @@ def generate_train_val():
         network_str += generate_bn_layer('conv5_%d_sum_bn'%l, 'conv5_%d_sum'%l, 'conv5_%d_sum_bn'%l)
         network_str += generate_activation_layer('conv5_%d_sum_relu'%l, 'conv5_%d_sum_bn'%l, 'conv5_%d_sum_bn'%l, 'ReLU')
         last_top = 'conv5_%d_sum_bn'%l
-    network_str += generate_pooling_layer(1, 1, 'AVE', 'pool2', last_top, 'pool2')
+    network_str += generate_pooling_layer(7, 1, 'AVE', 'pool2', last_top, 'pool2')
     network_str += generate_fc_layer(1000, 'fc', 'pool2', 'fc', 'gaussian')
     network_str += generate_softmax_loss('fc')
     return network_str
